@@ -1,0 +1,145 @@
+.chat{
+    display: flex;
+    flex-direction: column;
+    flex: 0.65;
+    height: 100vh;
+    background-color: white;
+}
+
+.chat__header{
+    padding: 20px;
+    align-items: center;
+    display: flex;
+    
+    border-bottom: 1px solid lightgray;
+    background-color: #f5f5f5;
+}
+
+.chat__more{
+    display: none !important;
+}
+
+.chat__headerContainer{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.chat__welcomeHeaderContainer{
+    font-family: 'Josefin Sans', sans-serif;
+    flex: 1;
+}
+
+.chat__welcomeHeaderContainer > h4 {
+    color: #374C66;
+    text-align: center;
+}
+
+
+.chat__header > h4 {
+    font-weight: 500;
+    color: gray;
+}
+
+.chat__name {
+    color: black;
+}
+
+.chat__input{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-top: 1px solid lightgray;
+    background-color: #f5f5f5;
+}
+
+.chat__input > form {
+    flex: 1;
+}
+
+.chat__message {
+    flex: 1;
+    overflow: scroll;
+}
+
+.chat__message::-webkit-scrollbar{
+    display: none;
+}
+.chat__message {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.chat__input > form > input {
+    width: 98%;
+    outline-width: 0;
+    border: 1px solid lightgray;
+    border-radius: 999px;
+    padding: 5px;
+}
+
+.chat__input > form > button {
+    display: none;
+}
+
+.chat__modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: scroll; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+
+  /* Modal Content/Box */
+  .chat__modalContent {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .chat__modalClose {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .chat__modalClose:hover,
+  .chat__modalClose:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+
+  @media screen and (max-width: 600px) {
+    .chat {
+        flex: 1;
+        height: 93vh;
+    }
+    .chat__header{
+        padding: 0px;
+        padding-right: 20px;
+    }
+
+    .chat__hide{
+        display: none;
+    }
+
+    .chat__more{
+        display: block !important;
+        
+    }
+
+  }
